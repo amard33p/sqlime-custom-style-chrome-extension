@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "SQLime with Gridlines",
+  "version": "1.0",
+  "description": "Override result.css with a custom style to show row-column gridlines for sqlime.org",
+  "content_scripts": [
+    {
+      "matches": ["https://sqlime.org/*"],
+      "js": ["inject.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["override.css"],
+      "matches": ["https://sqlime.org/*"]
+    }
+  ]
+}
